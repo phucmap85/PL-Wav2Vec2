@@ -4,37 +4,6 @@ The model uses a Wav2Vec2 acoustic backbone, extracts NCCF-based pitch features,
 
 On the private test set, it achieved a score of `0.6990` and ranked in the top 3.
 
-## Repository Layout
-
-```text
-+-- metadata/                          # Metadata and lexicon
-|   +-- train.csv                      # Original training metadata
-|   +-- train_phones.csv               # Training metadata with phone sequences
-|   +-- eval.csv                       # Original evaluation metadata
-|   +-- eval_phones.csv                # Evaluation metadata with phone sequences
-|   +-- test_phones.csv                # Test metadata used for prediction
-|   +-- test_submission_example.csv    # Submission format example
-|   +-- lexicon_vmd.txt                # Source lexicon for vocab.json
-+-- audio_data/                        # Audio files
-|   +-- train/                         # Training audio
-|   +-- public_test/                   # Public test audio
-|   +-- private_test/                  # Private test audio
-+-- cli.py                             # CLI entry point: make-vocab, train, predict
-+-- config.json                        # Training and prediction configuration
-+-- config.py                          # Config loading helpers
-+-- dataset.py                         # Data loading, augmentation, collator, sampler
-+-- evaluate.py                        # Computes the MDD Challenge custom score
-+-- metrics.py                         # CTC decoding and metric integration
-+-- model.py                           # LingWav2Vec2ForCTC and PitchEncoder
-+-- optim.py                           # Optimizer and checkpoint resume helpers
-+-- pitch.py                           # Pitch extraction and normalization
-+-- predict.py                         # Inference
-+-- train.py                           # Training loop
-+-- vocab.py                           # Vocabulary builder
-+-- vocab.json                         # Phone vocabulary
-+-- requirements.txt
-```
-
 ## Installation
 
 Create a Python environment and install the dependencies.
