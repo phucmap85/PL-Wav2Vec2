@@ -1,0 +1,7 @@
+numpy
+torch
+torchaudio
+transformers>=4.40
+accelerate>=0.26
+soundfile
+git+https://github.com/KellerJordan/Muon
