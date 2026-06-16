@@ -32,7 +32,10 @@ def _prediction_args_kwargs(cfg: dict) -> dict:
         "label_names": ["labels"],
         "report_to": "none",
         "dataloader_num_workers": int(cfg["dataloader_num_workers"]),
+        "disable_tqdm": True,
+        "log_level": "info",
     }
+    
     signature = inspect.signature(TrainingArguments.__init__)
     strategy_key = "eval_strategy" if "eval_strategy" in signature.parameters else "evaluation_strategy"
     kwargs[strategy_key] = "no"

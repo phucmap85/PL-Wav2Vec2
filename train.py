@@ -51,6 +51,8 @@ def _training_args_kwargs(cfg: dict, has_eval: bool) -> dict:
         "label_names": ["labels"],
         "save_strategy": "steps",
         "dataloader_num_workers": int(cfg["dataloader_num_workers"]),
+        "disable_tqdm": True,
+        "log_level": "info",
     }
 
     signature = inspect.signature(TrainingArguments.__init__)
