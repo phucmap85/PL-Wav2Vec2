@@ -31,7 +31,7 @@ The default configuration uses:
 - `metadata/eval_phones.csv` for evaluation
 - `vocab.json` as the phone vocabulary
 - `nguyenvulebinh/wav2vec2-base-vietnamese-250h` as the base acoustic model
-- `outputs/wav2vec2-250h-pitch-freeze-w2v` as the output directory
+- `outputs/wav2vec2-250h-pitch` as the output directory
 
 You can override individual config values from the command line with `--set key=value`.
 
@@ -64,7 +64,7 @@ Run prediction from a trained checkpoint:
 ```bash
 python cli.py predict ^
   --config config.json ^
-  --checkpoint outputs/wav2vec2-250h-pitch-freeze-w2v ^
+  --checkpoint outputs/wav2vec2-250h-pitch ^
   --data metadata/test_phones.csv ^
   --output results.csv ^
   --max-samples 20
