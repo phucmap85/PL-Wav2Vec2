@@ -1,6 +1,6 @@
-# LingWav2Vec2 + PitchEncoder for Vietnamese Mispronunciation Detection and Diagnosis Challenge
+# Pitch and Linguistic-augmented Wav2Vec2 for Vietnamese Mispronunciation Detection and Diagnosis Challenge
 
-The model uses the [LingWav2Vec2](https://github.com/tuanio/ling-wav2vec2) acoustic backbone, extracts NCCF-based pitch features, encodes them with `PitchEncoder`, and combines the acoustic sequence with canonical phoneme information through cross-attention before the CTC prediction head.
+The model uses a Wav2Vec2 acoustic backbone, extracts NCCF-based pitch features, encodes them with `PitchEncoder`, and combines the acoustic sequence with canonical phoneme information through cross-attention before the CTC prediction head.
 
 On the private test set, it achieved a score of `0.6990` and ranked in the top 3.
 
